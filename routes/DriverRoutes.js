@@ -3,6 +3,7 @@ const router=express.Router();
 const user=require("../models/Driver");
 const bcrypt =require("bcryptjs");
 const jwt=require("jsonwebtoken");
+const busSchema = require("../models/Bus");
 const secretKey="chintapkdumdum"
 
 
@@ -21,8 +22,7 @@ router.post('/signup', async (req, res) => {
                 name,
                 license,
                 busNumber,
-                password:hashedpw,
-
+                password: hashedpw,
             });
             res.status(200).json({msg: "user created"});
           
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
         return res.json({ msg: "error" });
     }
 
-    const payload = { license };
+    const payload = { license, };
     const token = jwt.sign(payload, secretKey, { expiresIn: '1d' });
 
     // Set the cookie before sending the response

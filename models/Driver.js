@@ -13,8 +13,9 @@ const driverSchema = new Schema({
     required: true
   },
   busNumber: {
-    type: String,
-    required: true
+    type: Number,
+    required: true,
+    unique: true, 
   },
   password: {
     type: String,

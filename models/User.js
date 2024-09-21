@@ -14,7 +14,7 @@ const userSchema = new Schema({
     unique: true
   },
   busNumber: {
-    type: String,
+    type: Number,
     required: true
   },
   password: {
