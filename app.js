@@ -17,8 +17,11 @@ app.use(cookieParser());
 app.use('/driver',DriverRoute);
 app.use('/user',UserRoute);
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+
+
+
+app.get('/buses', (req, res) => {
+    res.send('list of working buses are here!')
 })
 
 
