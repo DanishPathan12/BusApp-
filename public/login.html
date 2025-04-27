@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form" id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <form action="/user/login" method="POST">
+                <label for="login-enrollment">Enrollment Number</label>
+                <input type="text" id="login-enrollment" name="enrollmentNumber" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        console.log("login.html loaded");
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <h2>Login</h2>
+            <form action="/user/login" method="POST">
+                <label for="login-enrollment">Enrollment Number</label>
+                <input type="text" id="login-enrollment" name="enrollmentNumber" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <button type="submit">Login</button>
+
+                <div class="switch">
+                    <p>Don't have an account? <a href="signup.html">Signup</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
